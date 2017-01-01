@@ -1,0 +1,3 @@
+<view>
+    <video src="{{ src }}" poster="{{ url }}" binderror="video_error" controls></video>
+</view>

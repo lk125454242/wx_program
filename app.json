@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/logs/logs",
+    "pages/chat/chat",
+    "pages/video/video",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#FFFFFF",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "导航",
+    "navigationBarTextStyle": "#FFFFFF",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#FFFFFF",
+    "selectedColor": "#1296db",
+    "borderStyle": "#FF0000",
+    "backgroundColor": "#000000",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/index_blur.png",
+        "selectedIconPath": "icon/index_focus.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "分类",
+        "iconPath": "icon/classify_blur.png",
+        "selectedIconPath": "icon/classify_focus.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "列表",
+        "iconPath": "icon/list_blur.png",
+        "selectedIconPath": "icon/list_focus.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "层级",
+        "iconPath": "icon/assist_blur.png",
+        "selectedIconPath": "icon/assist_focus.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "icon/my_blur.png",
+        "selectedIconPath": "icon/my_focus.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000,
+    "uploadFile": 10000,
+    "connectSocket": 5000
+  },
+  "debug": false
+}

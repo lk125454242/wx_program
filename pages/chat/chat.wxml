@@ -1,0 +1,9 @@
+<view>
+    <block wx:key="{{ pi_val }}" wx:for="{{ placesTop }}">
+        
+    </block>
+    <view class="section">
+        <input placeholder="输入内容" bindinput="bindInput" auto-focus/>
+    </view>
+    <button type="primary" size="default" loading="false" plain="true" bindtap="sendmessage"> 提交 </button>
+</view>

@@ -1,0 +1,6 @@
+<view class="section">
+  我是列表
+  <view wx:key="name" wx:for="{{list}}">
+    {{ item.name }}
+  </view>
+</view>

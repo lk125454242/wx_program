@@ -1,0 +1,101 @@
+<!--index.wxml-->
+<!-- 顶部轮播 -->
+<view bindtap="default" wx:if="{{ placesTop.length }}">
+  <swiper indicator-dots="true"
+    autoplay="true" interval="5000" duration="300">
+    <block wx:key="{{ pi_val }}" wx:for="{{ placesTop }}">
+      <swiper-item>
+        <image src="{{item.pi_img}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 精彩视频 -->
+<view wx:if="{{ splendid.length !=0 && splendid.length%2 == 0 }}">
+  <view class="title">
+    精彩视频集锦
+  </view>
+  <view class="wonderful_video">
+    <block wx:key="attachid" wx:for="{{ splendid }}">
+      <view class="wonderful_image  flex_item">
+        <image bindtap="bindVideoTap" data-url="{{ item.attach_pics }}" data-title="{{ item.prd_auther }}" data-src="{{ item.attach_path }}" src="{{item.attach_pics}}"></image>
+        <view class="corner"></view>
+        <view class="wonderful_name">{{ item.prd_auther }}</view>
+      </view>
+    </block>
+  </view>
+  <view class="more">更多精彩视频 ></view>
+  <view class="hr"></view>
+</view>
+<!-- 课程预告 -->
+<view wx:if="{{ placesRecommend.length }}">
+  <view class="title">
+    课程预告
+  </view>
+  <view class="padding_11pt">
+    <swiper indicator-dots="true"
+    autoplay="true" interval="5000" duration="1000">
+    <block wx:key="{{ pi_val }}" wx:for="{{ placesRecommend }}">
+      <swiper-item>
+        <image src="{{item.pi_img}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  </view>
+  <view class="hr"></view>
+</view>
+<!-- 课程班列表 -->
+<view wx:if="{{ course.length }}">
+
+  <view class="title">
+    课程班列表
+  </view>
+  <view class="padding_11pt">
+    <block wx:key="{{ goodsid }}" wx:for="{{ course }}">
+
+      <view class="class_list">
+          <view class="class_list_image_container inline">
+            <image src="{{ item.goods_img }}" class="class_list_image"/>
+          </view>
+          <view class="class_list_text_container inline">
+            <view class="class_list_title two_ellipsis">{{ item.goods_name }}</view>
+            <view class="class_list_decration one_ellipsis">{{ item.goods_summary  }}</view>
+            <view  class="class_list_time">{{ item.goods_start }}</view>
+          </view>
+      </view>
+
+    </block>
+  </view>
+  <view class="hr"></view>
+</view>
+
+<view wx:if="{{ classback.length }}">
+
+  <view class="title">
+    往期课程
+  </view>
+  <view class="section section_gap">
+    <scroll-view class="scroll-view_H" scroll-x="true" scroll-y="false" style="width: 100%">
+        
+        <view wx:key="{{ classid }}" 
+          wx:for="{{ classback }}" 
+          wx:for-item="item" 
+          class="scroll-view-item_H"
+          style="{{ index === classback.length - 1 ? 'margin-right: 0.6875rem;' : '' }}"
+        >
+            <view class="class_back_image">
+              <image src="{{ item.class_back_pics }}" class="class_list_image"/>
+            </view>
+            <view class="class_back_title">
+              <view class="inline" wx:key="{{ m_name }}" wx:for="{{ item.teacher }}" wx:for-item="teacher">
+                  {{ teacher.m_name }}
+              </view>
+            </view>
+            <view class="class_back_decration">
+              {{ item.class_name }}
+            </view>
+        </view>
+
+    </scroll-view>
+  </view>
+</view>

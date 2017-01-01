@@ -1,0 +1,21 @@
+<view class="login container">
+    <view class="input_container">
+        <input type="text" bindinput="bindPhone" auto-focus placeholder="请输入手机号"/>
+    </view>
+
+    <view class="flex">
+        <view class="flex_2">
+            <view class="input_container">
+                <input type="text" bindinput="bindCode" placeholder="请输入验证码"/>
+            </view>
+        </view>
+        <view class="flex_1">
+            <view class="button_container">
+                <button type="{{ send? 'warn' : 'primary' }}" bindtap="send_sms" size="default" loading="{{ send }}" disabled="{{ send }}">
+                {{ send? second + 's' : '获取验证码' }}
+                </button>
+            </view>
+        </view>
+    </view>
+    <button type="primary" size="default" bindtap="bindLogin" loading="{{ login }}">登录</button>
+</view>

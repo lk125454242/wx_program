@@ -1,0 +1,71 @@
+  /**app.wxss**/
+.container {
+  width: 100%;
+  padding: 0 5%;
+  height: 100%;
+}
+view{
+  box-sizing: border-box;
+}
+page{
+  overflow-x: hidden; 
+}
+.padding_11pt{
+  padding-left: 0.6875rem;
+  padding-right: 0.6875rem;
+}
+.inline{
+  display: inline-block;
+  vertical-align: top;
+}
+.one_ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.two_ellipsis{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.flex{
+  display: flex;
+}
+.flex_item{
+  align-content: flex-start;
+  flex-flow:row nowrap;
+  flex-direction:row;
+  /* 
+    flex-direction: column;
+    align-items: center;
+   */
+  align-items:strecth;
+  justify-content:space-between;
+}
+.flex_1{
+  flex-shrink: 1;
+}
+.flex_2{
+  flex-shrink: 2;
+}
+/* 输入框样式 开始 */
+input{
+  width: 100%;
+  height: 100%;
+}
+.input_container,button{
+  width: 100%;
+  height: 2.3rem;
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+}
+.input_container{
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  line-height: 2rem;
+  padding: 0 .33rem
+}
+/* 输入框样式 结束 */
